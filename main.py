@@ -3,7 +3,7 @@ import re
 
 print("Current Working Directory:", os.getcwd())
 
-# Token types
+
 KEYWORDS = {'if', 'while', 'print'}
 OPERATORS = {'=', '==', '<', '>', '<=', '>=', '+', '-', '*', '/', '%', '+=', ':', '(', ')'}
 DELIMITERS = {'(', ')', ':', ','}
@@ -151,7 +151,6 @@ def generate_machine_code(assembly):
 
     return machine_code
 
-# ✅ This prints machine code with 4 columns per row, each 16 bits
 def print_machine_code_columns_4(machine_code, columns=4):
     for instr in machine_code:
         padded = [instr] + ['0000000000000000'] * (columns - 1)
